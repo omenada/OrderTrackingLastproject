@@ -1,0 +1,57 @@
+﻿@Model IEnumerable<order.user>
+
+
+    @{
+        Layout = null;
+    }
+       
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Login</title>
+    </head>
+    <body>
+        <div id="login-div">
+            @using (Html.BeginForm(FormMethod.Post))
+            {
+
+                <table>
+                    <tr>
+
+                        <td></td>
+                        <td style="text-decoration:underline">Tracking Managment System</td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            @Html.LabelFor(model => model.u_username)
+
+                        </td>
+                        <td>
+                            @Html.EditorFor(model => model.u_username)
+                        </td>
+                    <tr />
+                    <tr>
+                        <td>
+                            @Html.LabelFor(model => model.u_password)
+
+                            @Html.EditorFor(model => model.u_password)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+
+                            <input type="submit" name="name" value="Login" />
+                            <input type="reset" name="name" value="Cancel" />
+
+                        </td>
+
+                    </tr>
+                </table>
+
+            }
+        </div>
+    </body>
+</html>
