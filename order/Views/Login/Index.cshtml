@@ -1,57 +1,61 @@
-﻿@Model IEnumerable<order.user>
+﻿@model order.user
 
 
-    @{
-        Layout = null;
-    }
-       
+@{
+    Layout = null;
+}
 
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Login</title>
-    </head>
-    <body>
-        <div id="login-div">
-            @using (Html.BeginForm(FormMethod.Post))
-            {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*<meta name="viewport" content="width=device-width" />*@
+    <title>Login</title>
+    @*<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="~/Scripts/modernizr-2.8.3.js"></script>*@
+   
+</head>
+<body>
+    <div id="login-div">
+        @using (Html.BeginForm(FormMethod.Post))
+        {
 
-                <table>
-                    <tr>
+            <table>
+                <tr>
 
-                        <td></td>
-                        <td style="text-decoration:underline">Tracking Managment System</td>
-                    </tr>
-                    <tr>
-                        <td>
+                    <td></td>
+                    <td style="text-decoration:underline">Tracking Managment System</td>
+                </tr>
+                <tr>
+                    <td>
 
-                            @Html.LabelFor(model => model.u_username)
+                        @Html.LabelFor(model => model.u_username)
 
-                        </td>
-                        <td>
-                            @Html.EditorFor(model => model.u_username)
-                        </td>
-                    <tr />
-                    <tr>
-                        <td>
-                            @Html.LabelFor(model => model.u_password)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.u_username)
+                    </td>
+                <tr />
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.u_password)
 
-                            @Html.EditorFor(model => model.u_password)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
+                        @Html.EditorFor(model => model.u_password)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
 
-                            <input type="submit" name="name" value="Login" />
-                            <input type="reset" name="name" value="Cancel" />
+                        <input type="submit" name="name" value="Login" />
+                        <input type="reset" name="name" value="Cancel" />
 
-                        </td>
+                    </td>
 
-                    </tr>
-                </table>
+                </tr>
+            </table>
 
-            }
-        </div>
-    </body>
+        }
+    </div>
+</body>
 </html>

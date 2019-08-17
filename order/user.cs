@@ -14,7 +14,7 @@ namespace order
     using System.ComponentModel.DataAnnotations;
 
     public partial class user
-    {
+    { 
         [Key]
         public int u_id { get; set; }
 
